@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funções</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function pulaLinha(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	};
+
+	function calCpontos(vitorias, empates, derrotas){
+		return (vitorias * 3) + empates - derrotas;
+	};
+
+	function calCpontosAdv(vitoriasAdv, empatesAdv, derrotasAdv){
+		return (vitoriasAdv * 3) + empatesAdv - derrotasAdv;
+	};
+
+	var vitorias = prompt("Quantos jogos ganhou?");
+
+	var empates = prompt("Quantos jogos empatou?");
+
+	var derrotas = prompt("Quantos jogos perdeu?");
+
+	var pontos = calCpontos(vitorias, parseInt(empates), derrotas);
+
+	var vitoriasAdv = prompt("Quantas vitorias o adversario tem?");
+
+	var empatesAdv = prompt("Quantos empates o adversario tem?");
+
+	var derrotasAdv = prompt("Quantos derrotas o adversario tem?");
+
+	var pontosAdv = calCpontosAdv(vitoriasAdv, parseInt(empatesAdv), derrotasAdv);
+
+
+	mostra("O time deles tem " + pontosAdv + " pontos." );
+
+	mostra("O nosso time tem " + pontos + " pontos." );
+	
+	if(pontos > pontosAdv){
+		mostra ("Nosso time esta indo MELHOR que o livros velhos!");
+	}
+
+	if(pontos < pontosAdv){
+		mostra ("Nosso time esta indo PIOR que o livros velhos!");
+	}
+
+	if(pontos == pontosAdv){
+		mostra ("Nosso time esta EMPATADO com o livros velhos!");
+	}
+
+
+
+
+</script>
+
+</body>
+</html>

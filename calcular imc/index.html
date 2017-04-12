@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calcular IMC</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var pulaLinha = function(){
+	document.write("<br>");
+	document.write("<br>");
+};
+
+var mostra = function(frase){
+	document.write(frase);
+	pulaLinha();
+}
+
+var calcIMC = function(altura,peso){
+	var imc = peso / (altura * altura);
+	return imc;
+};
+
+var peso = prompt("Qual o seu peso?");
+var altura = prompt("Qual o seu peso?");
+var imc = Math.round(calcIMC(altura,peso));
+
+mostra("Meu IMC é " + imc);
+mostra("Ainda estou " + Math.round(imc - 18.5) + " abaixo da magreza");
+
+</script>
+
+</body>
+</html>

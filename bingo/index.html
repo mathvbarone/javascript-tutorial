@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adivinha com HTML</title>
+</head>
+<body>
+
+<input type="text" id="numero" />
+<input type="submit" id="verificar" value="Adicione e verique no Bingo!" />
+
+
+<script type="text/javascript">
+ 	sorteados = [];
+ 	function addNumero(){
+ 		var numero = document.getElementByid('numero').value;
+ 		sorteados.push(numero);
+ 		console.log(sorteados);
+ 	};
+
+var verificar = document.getElementByid("verificar");
+verificar.onclick = addNumero;
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calcular IMC</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var pulaLinha = function(){
+	document.write("<br>");
+	document.write("<br>");
+};
+
+var mostra = function(frase){
+	document.write(frase);
+	pulaLinha();
+};
+
+var calcIMC = function(altura,peso){
+	imc = peso / (altura * altura);
+	return imc;
+};
+
+var altura = prompt( "Qual a sua altura?" );
+var peso = prompt(  "E o seu peso?");
+var imc = calcIMC( altura,peso );
+
+mostra( "O seu imc é igual a " + Math.round(imc) );
+
+
+
+if(imc > 35){
+	mostra("Seu IMC indica que você está ACIMA do peso");
+}
+
+if(imc < 18.5){
+	mostra("Seu IMC indica que você está ABAIXO peso");
+}
+
+if (imc >= 18.5 && imc <= 35){
+	mostra("OK! Seu imc é bom.");
+}
+
+
+
+</script>
+
+</body>
+</html>

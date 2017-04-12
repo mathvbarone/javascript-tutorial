@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adivinha com HTML</title>
+</head>
+<body>
+
+<form>
+	<input type="text" id="numero">
+	<input type="submit" id="advinhar" value="Compare com o meu segredo!">
+</form>
+
+<script type="text/javascript">
+
+
+var segredos = [ 16, 34, 37, 42, 50, 58 ];
+
+var boxNumero = document.getElementById("numero");
+var boxChute = document.getElementById("advinhar");
+
+var clickAction = function () {
+	var achou = false;
+	for(var i = 0; i < segredos.length; i = i + 1){
+		if( segredos[i] == boxNumero.value){
+			alert("Você acertou o " + ( i + 1) + "º numero" );
+			achou = true;
+			break;
+		}
+	}
+	if(achou == false){
+		alert("Errou!");
+	}
+	
+	boxNumero.value = "";
+    boxNumero.focus();
+
+}
+
+boxChute.onclick = clickAction;
+
+
+</script>
+
+</body>
+</html>

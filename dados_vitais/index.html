@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dados Vitais</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var pulaLinha = function(){
+	document.write("<br>");
+	document.write("<br>");
+};
+
+var mostra = function(frase){
+	document.write(frase);
+	pulaLinha();
+};
+
+var calcDias = function(idade){
+	var dias = idade * 365;
+	return dias;
+};
+
+var calcBatimentos = function(dias){
+	var batimentos = dias * 24 * 60 * 60;
+	return batimentos;
+};
+
+var idade = prompt("Quantos anos você tem?");
+var dias = calcDias(idade);
+var batimentos = calcBatimentos(dias);
+
+mostra("Seu coração já  bateu " + batimentos + " vezes" + " durante " + dias + " dias.");
+
+</script>
+
+</body>
+</html>

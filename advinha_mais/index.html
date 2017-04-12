@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adivinha com HTML</title>
+</head>
+<body>
+
+<form>
+	<input type="text" id="numero">
+	<input type="submit" id="advinhar" value="Compare com o meu segredo!">
+</form>
+
+<script type="text/javascript">
+
+var segredos = Math.round( Math.random() * 10 );
+var boxNumero = document.getElementById("numero");
+boxNumero.value = "";
+
+var clickAction = function(){
+	if( segredos == boxNumero.value){
+		alert("Você acertou!");
+	}else{
+		alert("Você errou!");
+	}
+};
+
+var boxAdivinha = document.getElementById("advinhar");
+advinhar.onclick = clickAction;
+
+
+</script>
+
+</body>
+</html>
